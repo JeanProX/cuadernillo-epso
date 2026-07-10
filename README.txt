@@ -1,4 +1,4 @@
-CUADERNILLO DIGITAL EPSO — VERSIÓN SIN QR
+CUADERNILLO DIGITAL EPSO 
 
 1. Abre esta carpeta en Visual Studio Code.
 2. Abre index.html.
