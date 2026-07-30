@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#006657">
+  <title>Cuadernillo Digital EPSO</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="barra-superior">
+    <div class="barra-contenido">
+      <strong>Cuadernillo Digital EPSO</strong>
+      <span id="indicadorPagina">Inicio</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section id="pantallaInicio" class="pantalla">
+      <div class="tarjeta inicio-grid">
+        <img src="img/page-01.png" alt="Portada del cuadernillo EPSO" class="imagen-portada">
+        <div class="contenido-inicio">
+          <span class="etiqueta">Guía interactiva</span>
+          <h1>Educador en Prevención del Sobrepeso y Obesidad</h1>
+          <p>Este cuadernillo es de reflexión. No existen respuestas correctas o incorrectas.</p>
+
+          <label for="nombreParticipante">Nombre</label>
+          <input type="text" id="nombreParticipante" placeholder="Escribe tu nombre" autocomplete="name">
+
+          <label for="fechaActividad">Fecha</label>
+          <input type="date" id="fechaActividad">
+
+          <button type="button" class="boton-principal" id="btnComenzar">Comenzar</button>
+          <button type="button" class="boton-texto oculto" id="btnContinuar">Continuar donde me quedé</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pantallaActividad" class="pantalla oculto">
+      <div class="progreso-contenedor">
+        <div class="progreso-texto">
+          <span id="textoActividad">Actividad 1 de 10</span>
+          <span id="textoPorcentaje">10%</span>
+        </div>
+        <div class="barra-progreso"><div id="barraProgreso"></div></div>
+      </div>
+
+      <article class="tarjeta-actividad">
+        <div class="encabezado-actividad">
+          <span id="numeroActividad" class="numero-actividad">1</span>
+          <div>
+            <h2 id="tituloActividad"></h2>
+            <p id="instruccionActividad" class="instruccion"></p>
+          </div>
+        </div>
+
+        <img id="imagenActividad" class="imagen-actividad" alt="Actividad del cuadernillo">
+        <button type="button" class="boton-ver-imagen" id="btnAmpliar">🔍 Ampliar imagen</button>
+
+        <div id="formularioActividad" class="formulario-actividad"></div>
+
+        <div class="navegacion">
+          <button type="button" class="boton-secundario" id="btnAnterior">← Anterior</button>
+          <button type="button" class="boton-principal sin-margen" id="btnSiguiente">Guardar y continuar →</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="pantallaFinal" class="pantalla oculto">
+      <div class="tarjeta-final">
+        <div class="icono-final">✓</div>
+        <h2>Cuadernillo completado</h2>
+        <p>Tus respuestas quedaron guardadas en este dispositivo.</p>
+        <div id="resumenFinal" class="resumen-final"></div>
+        <button type="button" class="boton-principal" id="btnReflexiones">👁 Ver preguntas y respuestas</button>
+        <button type="button" class="boton-secundario ancho-completo" id="btnEditar">← Revisar respuestas</button>
+        <button type="button" class="boton-peligro" id="btnReiniciar">Borrar y comenzar de nuevo</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="visorImagen" class="visor oculto" role="dialog" aria-modal="true">
+    <button type="button" class="cerrar-visor" id="btnCerrarVisor" aria-label="Cerrar">×</button>
+    <img id="imagenVisor" alt="Imagen ampliada">
+  </div>
+
+  <div id="modalResumen" class="modal-resumen oculto" role="dialog" aria-modal="true">
+    <div class="modal-resumen-cabecera">
+      <div>
+        <strong>Círculo de lectura</strong>
+        <small>Preguntas y respuestas del cuadernillo</small>
+      </div>
+      <button type="button" id="btnCerrarResumen" aria-label="Cerrar">×</button>
+    </div>
+    <div class="resumen-lectura-contenido">
+      <div id="datosResumen" class="datos-resumen"></div>
+      <div id="contenidoResumenLectura"></div>
+    </div>
+    <div class="resumen-lectura-acciones">
+      <button type="button" class="boton-secundario" id="btnVolverResumen">Volver</button>
+      <button type="button" class="boton-principal sin-margen" id="btnImprimirResumen">Imprimir / guardar como PDF</button>
+    </div>
+  </div>
+
+  <div id="notificacion" class="notificacion">
+    <span class="check">✓</span>
+    <span id="textoNotificacion">Respuestas guardadas</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
