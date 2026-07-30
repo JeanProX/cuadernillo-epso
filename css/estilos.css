@@ -203,3 +203,13 @@ input:focus, textarea:focus, select:focus { border-color: var(--verde); box-shad
   .resumen-lectura-contenido { max-width: 100%; padding: 0; overflow: visible; }
   .actividad-resumen, .datos-resumen { box-shadow: none; break-inside: avoid; }
 }
+
+.campo-error {
+  border-color: #c62828 !important;
+  background-color: #fff5f5 !important;
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.14) !important;
+}
+
+.campo-error::placeholder {
+  color: #a93434;
+}
